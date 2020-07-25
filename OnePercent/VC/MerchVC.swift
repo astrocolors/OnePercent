@@ -1,5 +1,5 @@
 //
-//  HomeVC.swift
+//  MerchVC.swift
 //  OnePercent
 //
 //  Created by Astro on 7/25/20.
@@ -8,24 +8,24 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+class MerchVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.7960784314, blue: 0.7960784314, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
 
         configure()
-        
     }
-    
     
     private func configure(){
         
         
         
         
+        
+        
+        
     }
-
 
 }

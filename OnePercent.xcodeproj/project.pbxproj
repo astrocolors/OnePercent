@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		DD17A7FC24CCB276006F9D18 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17A7FB24CCB276006F9D18 /* HomeVC.swift */; };
+		DDD14BE824CCB7CB00DA2825 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD14BE724CCB7CB00DA2825 /* TabBarVC.swift */; };
+		DDD14BEA24CCB9B900DA2825 /* VideosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD14BE924CCB9B900DA2825 /* VideosVC.swift */; };
+		DDD14BEC24CCB9DD00DA2825 /* MerchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD14BEB24CCB9DD00DA2825 /* MerchVC.swift */; };
+		DDD14BEE24CCBA1F00DA2825 /* AnnouncementsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD14BED24CCBA1F00DA2825 /* AnnouncementsVC.swift */; };
 		DDD270A524CCB10200F20F7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD270A424CCB10200F20F7F /* AppDelegate.swift */; };
 		DDD270A724CCB10200F20F7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD270A624CCB10200F20F7F /* SceneDelegate.swift */; };
 		DDD270AE24CCB10400F20F7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD270AD24CCB10400F20F7F /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 
 /* Begin PBXFileReference section */
 		DD17A7FB24CCB276006F9D18 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		DDD14BE724CCB7CB00DA2825 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		DDD14BE924CCB9B900DA2825 /* VideosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosVC.swift; sourceTree = "<group>"; };
+		DDD14BEB24CCB9DD00DA2825 /* MerchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchVC.swift; sourceTree = "<group>"; };
+		DDD14BED24CCBA1F00DA2825 /* AnnouncementsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsVC.swift; sourceTree = "<group>"; };
 		DDD270A124CCB10200F20F7F /* OnePercent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnePercent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD270A424CCB10200F20F7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDD270A624CCB10200F20F7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +57,11 @@
 		DD17A7FA24CCB25D006F9D18 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				DDD14BE724CCB7CB00DA2825 /* TabBarVC.swift */,
 				DD17A7FB24CCB276006F9D18 /* HomeVC.swift */,
+				DDD14BED24CCBA1F00DA2825 /* AnnouncementsVC.swift */,
+				DDD14BE924CCB9B900DA2825 /* VideosVC.swift */,
+				DDD14BEB24CCB9DD00DA2825 /* MerchVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -151,7 +163,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD17A7FC24CCB276006F9D18 /* HomeVC.swift in Sources */,
+				DDD14BEA24CCB9B900DA2825 /* VideosVC.swift in Sources */,
+				DDD14BEE24CCBA1F00DA2825 /* AnnouncementsVC.swift in Sources */,
+				DDD14BEC24CCB9DD00DA2825 /* MerchVC.swift in Sources */,
 				DDD270A524CCB10200F20F7F /* AppDelegate.swift in Sources */,
+				DDD14BE824CCB7CB00DA2825 /* TabBarVC.swift in Sources */,
 				DDD270A724CCB10200F20F7F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  OnePercent
 //
-//  Created by Shamik Patro on 7/25/20.
+//  Created by Astro on 7/25/20.
 //  Copyright © 2020 Astronomical. All rights reserved.
 //
 
@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = HomeVC()
+        window?.rootViewController = TabBarVC()
         window?.makeKeyAndVisible()
         
     }
