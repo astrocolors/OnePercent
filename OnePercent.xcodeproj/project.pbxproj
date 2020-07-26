@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DD17A7FC24CCB276006F9D18 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17A7FB24CCB276006F9D18 /* HomeVC.swift */; };
 		DD2AF19724CD4ACA00C0ECF3 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2AF19624CD4ACA00C0ECF3 /* CartVC.swift */; };
-		DD93500C24CD45B2008C306F /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD93500B24CD45B2008C306F /* SideMenuVC.swift */; };
 		DDD14BE824CCB7CB00DA2825 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD14BE724CCB7CB00DA2825 /* TabBarVC.swift */; };
 		DDD14BEC24CCB9DD00DA2825 /* MerchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD14BEB24CCB9DD00DA2825 /* MerchVC.swift */; };
 		DDD270A524CCB10200F20F7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD270A424CCB10200F20F7F /* AppDelegate.swift */; };
@@ -21,7 +20,6 @@
 /* Begin PBXFileReference section */
 		DD17A7FB24CCB276006F9D18 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		DD2AF19624CD4ACA00C0ECF3 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
-		DD93500B24CD45B2008C306F /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		DDD14BE724CCB7CB00DA2825 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		DDD14BEB24CCB9DD00DA2825 /* MerchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchVC.swift; sourceTree = "<group>"; };
 		DDD270A124CCB10200F20F7F /* OnePercent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnePercent.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,17 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				DD93500A24CD458D008C306F /* Main */,
-				DD93500924CD4578008C306F /* NavBar */,
 			);
 			path = VC;
-			sourceTree = "<group>";
-		};
-		DD93500924CD4578008C306F /* NavBar */ = {
-			isa = PBXGroup;
-			children = (
-				DD93500B24CD45B2008C306F /* SideMenuVC.swift */,
-			);
-			path = NavBar;
 			sourceTree = "<group>";
 		};
 		DD93500A24CD458D008C306F /* Main */ = {
@@ -183,7 +172,6 @@
 				DDD270A524CCB10200F20F7F /* AppDelegate.swift in Sources */,
 				DD2AF19724CD4ACA00C0ECF3 /* CartVC.swift in Sources */,
 				DDD14BE824CCB7CB00DA2825 /* TabBarVC.swift in Sources */,
-				DD93500C24CD45B2008C306F /* SideMenuVC.swift in Sources */,
 				DDD270A724CCB10200F20F7F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
