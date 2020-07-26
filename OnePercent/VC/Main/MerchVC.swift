@@ -44,8 +44,11 @@ class MerchVC: UIViewController {
         
         view.addSubview(merchView)
         
+        merchView.backgroundColor = .white
+        merchView.delegate = self
+        merchView.dataSource = self
         merchView.translatesAutoresizingMaskIntoConstraints = false
-        
+        merchView.register(MerchCell.self, forCellWithReuseIdentifier: MerchCell.reuseID)
         
         NSLayoutConstraint.activate([
             
@@ -73,6 +76,38 @@ class MerchVC: UIViewController {
         let searchVC = SearchVC()
         
         navigationController?.pushViewController(searchVC, animated: true)
+        
+    }
+    
+}
+
+extension MerchVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        
+        return 1
+        
+    }
+   
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return 2
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MerchCell.reuseID, for: indexPath) as! MerchCell
+        
+        return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let fullScreenItemVC = FullscreenItemVC()
+        
+        present(fullScreenItemVC, animated: true)
         
     }
     

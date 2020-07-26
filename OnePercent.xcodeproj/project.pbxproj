@@ -25,6 +25,7 @@
 		DDD270A724CCB10200F20F7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD270A624CCB10200F20F7F /* SceneDelegate.swift */; };
 		DDD270AE24CCB10400F20F7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD270AD24CCB10400F20F7F /* Assets.xcassets */; };
 		DDD270B124CCB10400F20F7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD270AF24CCB10400F20F7F /* LaunchScreen.storyboard */; };
+		DDE9903624CD7F8B00DC5EF1 /* FullscreenItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE9903524CD7F8B00DC5EF1 /* FullscreenItemVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		DDD270AD24CCB10400F20F7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDD270B024CCB10400F20F7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDD270B224CCB10400F20F7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDE9903524CD7F8B00DC5EF1 /* FullscreenItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenItemVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				DD17A7FB24CCB276006F9D18 /* HomeVC.swift */,
 				DDD14BEB24CCB9DD00DA2825 /* MerchVC.swift */,
 				DD2AF19624CD4ACA00C0ECF3 /* CartVC.swift */,
+				DDE9903424CD7F4F00DC5EF1 /* Shop */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -173,6 +176,14 @@
 				DDD270B224CCB10400F20F7F /* Info.plist */,
 			);
 			path = OnePercent;
+			sourceTree = "<group>";
+		};
+		DDE9903424CD7F4F00DC5EF1 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				DDE9903524CD7F8B00DC5EF1 /* FullscreenItemVC.swift */,
+			);
+			path = Shop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 				DD9063F524CD623F00112F58 /* CustomViewVC.swift in Sources */,
 				DD31D4EC24CD760800974AFE /* NotiVC.swift in Sources */,
 				DDD270A524CCB10200F20F7F /* AppDelegate.swift in Sources */,
+				DDE9903624CD7F8B00DC5EF1 /* FullscreenItemVC.swift in Sources */,
 				DD2AF19724CD4ACA00C0ECF3 /* CartVC.swift in Sources */,
 				DDD14BE824CCB7CB00DA2825 /* TabBarVC.swift in Sources */,
 				DD31D4F724CD78BE00974AFE /* AboutVC.swift in Sources */,
