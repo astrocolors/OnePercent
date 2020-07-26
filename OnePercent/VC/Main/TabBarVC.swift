@@ -33,29 +33,6 @@ class TabBarVC: UITabBarController {
         
     }
     
-    private func createNotiVC() -> UINavigationController {
-        
-        let notiVC = NotiVC()
-        
-        notiVC.tabBarItem.image = UIImage(systemName: "bell")
-        notiVC.tabBarItem.selectedImage = UIImage(systemName: "bell.fill")
-        
-        return UINavigationController(rootViewController: notiVC)
-        
-    }
-    
-    private func createVideosVC() -> UINavigationController {
-        
-        let videosVC = VideosVC()
-        
-        videosVC.tabBarItem.image = UIImage(systemName: "play.rectangle")
-        videosVC.tabBarItem.selectedImage = UIImage(systemName: "play.rectangle.fill")
-        
-        
-        return UINavigationController(rootViewController: videosVC)
-        
-    }
-    
     private func createMerchVC() -> UINavigationController {
         
         let merchVC = MerchVC()
@@ -67,14 +44,27 @@ class TabBarVC: UITabBarController {
         
     }
     
+    private func createCartVC() -> UINavigationController {
+        
+        let cartVC = CartVC()
+        
+        cartVC.tabBarItem.image = UIImage(systemName: "cart")
+        cartVC.tabBarItem.selectedImage = UIImage(systemName: "cart.fill")
+        
+        return UINavigationController(rootViewController: cartVC)
+        
+    }
+    
     private func configure(){
         
         tabBar.barTintColor = #colorLiteral(red: 0.9496201873, green: 0.9496201873, blue: 0.9496201873, alpha: 1)
         tabBar.tintColor = #colorLiteral(red: 0.2170326445, green: 0.505137953, blue: 0.1686274558, alpha: 1)
         
-        setViewControllers([createHomeVC(), createVideosVC(), createNotiVC(), createMerchVC()], animated: true)
+        setViewControllers([createHomeVC(), createMerchVC(), createCartVC()], animated: true)
         
         
     }
 
 }
+
+

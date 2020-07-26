@@ -20,7 +20,7 @@ class MerchVC: UIViewController {
     
     private func configureNavBar(){
         
-        let cartItem = UIBarButtonItem(image: UIImage(systemName: "cart"), style: .plain, target: self, action: #selector(pushCartVC))
+        let cartItem = UIBarButtonItem(image: UIImage(systemName: "square.grid.2x2"), style: .plain, target: self, action: #selector(pushCartVC))
         
         let sideMenuItem = UIBarButtonItem(image: UIImage(systemName: "line.horizontal.3"), style: .plain, target: self, action: #selector(pushSideMenuVC))
         
