@@ -40,8 +40,13 @@ class HomeVC: UIViewController {
         
         view.addSubview(tableView)
         
-        tableView.rowHeight = 400
         tableView.separatorInset = .zero
+        tableView.isPagingEnabled = true
+        tableView.allowsSelection = false
+        tableView.contentInsetAdjustmentBehavior = .never
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(HomeCell.self, forCellReuseIdentifier: HomeCell.reuseID)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -74,4 +79,29 @@ class HomeVC: UIViewController {
     }
 
 
-} 
+}
+
+extension HomeVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 10
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: HomeCell.reuseID, for: indexPath) as! HomeCell
+        
+        return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return self.tableView.frame.size.height
+        
+    }
+    
+}

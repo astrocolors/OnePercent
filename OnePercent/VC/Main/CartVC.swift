@@ -2,7 +2,7 @@
 //  CartVC.swift
 //  OnePercent
 //
-//  Created by Shamik Patro on 7/26/20.
+//  Created by Astro on 7/26/20.
 //  Copyright © 2020 Astronomical. All rights reserved.
 //
 
@@ -31,12 +31,19 @@ class CartVC: UIViewController {
         logo.contentMode = .scaleAspectFit
         logo.image = image
         
+        let notiItem = UIBarButtonItem(image: UIImage(systemName: "bell"), style: .plain, target: self, action: #selector(pushNotiVC))
+        
         let profileItem = UIBarButtonItem(image: UIImage(systemName: "person"), style: .plain, target: self, action: #selector(pushProfileVC))
             
         navigationItem.titleView = logo
+        
+        navigationItem.setLeftBarButton(notiItem, animated: true)
         navigationItem.setRightBarButton(profileItem, animated: true)
         
+        navigationItem.leftBarButtonItem?.tintColor = #colorLiteral(red: 0.2156862745, green: 0.5058823529, blue: 0.168627451, alpha: 1)
         navigationItem.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.2156862745, green: 0.5058823529, blue: 0.168627451, alpha: 1)
+        
+        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.2156862745, green: 0.5058823529, blue: 0.168627451, alpha: 1)
         
     }
     
@@ -74,6 +81,14 @@ class CartVC: UIViewController {
             checkoutButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
             
         ])
+        
+    }
+    
+    @objc func pushNotiVC(){
+        
+        let notiVC = NotiVC()
+        
+        present(notiVC, animated: true)
         
     }
     

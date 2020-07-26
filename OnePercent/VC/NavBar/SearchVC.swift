@@ -2,7 +2,7 @@
 //  SearchVC.swift
 //  OnePercent
 //
-//  Created by Shamik Patro on 7/26/20.
+//  Created by Astro on 7/26/20.
 //  Copyright © 2020 Astronomical. All rights reserved.
 //
 
@@ -32,6 +32,8 @@ class SearchVC: UIViewController {
         searchBar.placeholder = "Search Players"
         navigationItem.hidesBackButton = true
         navigationItem.setRightBarButton(dismissItem, animated: true)
+        
+        navigationItem.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.2156862745, green: 0.5058823529, blue: 0.168627451, alpha: 1)
         
         
     }

@@ -2,29 +2,44 @@
 //  CustomViewVC.swift
 //  OnePercent
 //
-//  Created by Shamik Patro on 7/26/20.
+//  Created by Astro on 7/26/20.
 //  Copyright © 2020 Astronomical. All rights reserved.
 //
 
 import UIKit
 
 class CustomViewVC: UIViewController {
+    
+    let customView = UITableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        configureCustomView()
+        
     }
     
+    private func configureCustomView(){
+        
+        view.addSubview(customView)
+        
+        customView.separatorInset = .zero
+        customView.rowHeight = 60
+        customView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            
+            customView.topAnchor.constraint(equalTo: view.topAnchor),
+            customView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            customView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            customView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            
+        ])
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
+    
 
 }
