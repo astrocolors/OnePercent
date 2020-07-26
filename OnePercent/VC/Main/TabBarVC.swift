@@ -69,7 +69,7 @@ class TabBarVC: UITabBarController {
     
     private func configure(){
         
-        tabBar.barTintColor = .black
+        tabBar.barTintColor = #colorLiteral(red: 0.8609000428, green: 1, blue: 1, alpha: 1)
         
         setViewControllers([createHomeVC(), createAnnouncementsVC(), createVideosVC(), createMerchVC()], animated: true)
         
