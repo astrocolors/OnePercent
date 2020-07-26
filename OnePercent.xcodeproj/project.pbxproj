@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		DD17A7FC24CCB276006F9D18 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17A7FB24CCB276006F9D18 /* HomeVC.swift */; };
+		DD2AF19724CD4ACA00C0ECF3 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2AF19624CD4ACA00C0ECF3 /* CartVC.swift */; };
+		DD2AF19924CD532700C0ECF3 /* NotiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2AF19824CD532700C0ECF3 /* NotiVC.swift */; };
 		DD93500C24CD45B2008C306F /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD93500B24CD45B2008C306F /* SideMenuVC.swift */; };
 		DDD14BE824CCB7CB00DA2825 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD14BE724CCB7CB00DA2825 /* TabBarVC.swift */; };
 		DDD14BEA24CCB9B900DA2825 /* VideosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD14BE924CCB9B900DA2825 /* VideosVC.swift */; };
 		DDD14BEC24CCB9DD00DA2825 /* MerchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD14BEB24CCB9DD00DA2825 /* MerchVC.swift */; };
-		DDD14BEE24CCBA1F00DA2825 /* AnnouncementsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD14BED24CCBA1F00DA2825 /* AnnouncementsVC.swift */; };
 		DDD270A524CCB10200F20F7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD270A424CCB10200F20F7F /* AppDelegate.swift */; };
 		DDD270A724CCB10200F20F7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD270A624CCB10200F20F7F /* SceneDelegate.swift */; };
 		DDD270AE24CCB10400F20F7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD270AD24CCB10400F20F7F /* Assets.xcassets */; };
@@ -21,11 +22,12 @@
 
 /* Begin PBXFileReference section */
 		DD17A7FB24CCB276006F9D18 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		DD2AF19624CD4ACA00C0ECF3 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		DD2AF19824CD532700C0ECF3 /* NotiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiVC.swift; sourceTree = "<group>"; };
 		DD93500B24CD45B2008C306F /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		DDD14BE724CCB7CB00DA2825 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		DDD14BE924CCB9B900DA2825 /* VideosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosVC.swift; sourceTree = "<group>"; };
 		DDD14BEB24CCB9DD00DA2825 /* MerchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchVC.swift; sourceTree = "<group>"; };
-		DDD14BED24CCBA1F00DA2825 /* AnnouncementsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsVC.swift; sourceTree = "<group>"; };
 		DDD270A124CCB10200F20F7F /* OnePercent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnePercent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD270A424CCB10200F20F7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDD270A624CCB10200F20F7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				DD93500B24CD45B2008C306F /* SideMenuVC.swift */,
+				DD2AF19624CD4ACA00C0ECF3 /* CartVC.swift */,
 			);
 			path = NavBar;
 			sourceTree = "<group>";
@@ -78,8 +81,8 @@
 			children = (
 				DDD14BE724CCB7CB00DA2825 /* TabBarVC.swift */,
 				DD17A7FB24CCB276006F9D18 /* HomeVC.swift */,
-				DDD14BED24CCBA1F00DA2825 /* AnnouncementsVC.swift */,
 				DDD14BE924CCB9B900DA2825 /* VideosVC.swift */,
+				DD2AF19824CD532700C0ECF3 /* NotiVC.swift */,
 				DDD14BEB24CCB9DD00DA2825 /* MerchVC.swift */,
 			);
 			path = Main;
@@ -183,11 +186,12 @@
 			files = (
 				DD17A7FC24CCB276006F9D18 /* HomeVC.swift in Sources */,
 				DDD14BEA24CCB9B900DA2825 /* VideosVC.swift in Sources */,
-				DDD14BEE24CCBA1F00DA2825 /* AnnouncementsVC.swift in Sources */,
 				DDD14BEC24CCB9DD00DA2825 /* MerchVC.swift in Sources */,
 				DDD270A524CCB10200F20F7F /* AppDelegate.swift in Sources */,
+				DD2AF19724CD4ACA00C0ECF3 /* CartVC.swift in Sources */,
 				DDD14BE824CCB7CB00DA2825 /* TabBarVC.swift in Sources */,
 				DD93500C24CD45B2008C306F /* SideMenuVC.swift in Sources */,
+				DD2AF19924CD532700C0ECF3 /* NotiVC.swift in Sources */,
 				DDD270A724CCB10200F20F7F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

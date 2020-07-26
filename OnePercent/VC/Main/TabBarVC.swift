@@ -26,21 +26,21 @@ class TabBarVC: UITabBarController {
         
         let homeVC = HomeVC()
         
-        homeVC.tabBarItem.image = UIImage(systemName: "person")
-        homeVC.tabBarItem.selectedImage = UIImage(systemName: "person.fill")
+        homeVC.tabBarItem.image = UIImage(systemName: "house")
+        homeVC.tabBarItem.selectedImage = UIImage(systemName: "house.fill")
         
         return UINavigationController(rootViewController: homeVC)
         
     }
     
-    private func createAnnouncementsVC() -> UINavigationController {
+    private func createNotiVC() -> UINavigationController {
         
-        let announcementsVC = AnnouncementsVC()
+        let notiVC = NotiVC()
         
-        announcementsVC.tabBarItem.image = UIImage(systemName: "person")
-        announcementsVC.tabBarItem.selectedImage = UIImage(systemName: "person.fill")
+        notiVC.tabBarItem.image = UIImage(systemName: "bell")
+        notiVC.tabBarItem.selectedImage = UIImage(systemName: "bell.fill")
         
-        return UINavigationController(rootViewController: announcementsVC)
+        return UINavigationController(rootViewController: notiVC)
         
     }
     
@@ -48,8 +48,8 @@ class TabBarVC: UITabBarController {
         
         let videosVC = VideosVC()
         
-        videosVC.tabBarItem.image = UIImage(systemName: "person")
-        videosVC.tabBarItem.selectedImage = UIImage(systemName: "person.fill")
+        videosVC.tabBarItem.image = UIImage(systemName: "play.rectangle")
+        videosVC.tabBarItem.selectedImage = UIImage(systemName: "play.rectangle.fill")
         
         
         return UINavigationController(rootViewController: videosVC)
@@ -60,8 +60,8 @@ class TabBarVC: UITabBarController {
         
         let merchVC = MerchVC()
         
-        merchVC.tabBarItem.image = UIImage(systemName: "person")
-        merchVC.tabBarItem.selectedImage = UIImage(systemName: "person.fill")
+        merchVC.tabBarItem.image = UIImage(systemName: "bag")
+        merchVC.tabBarItem.selectedImage = UIImage(systemName: "bag.fill")
         
         return UINavigationController(rootViewController: merchVC)
         
@@ -69,9 +69,10 @@ class TabBarVC: UITabBarController {
     
     private func configure(){
         
-        tabBar.barTintColor = #colorLiteral(red: 0.8609000428, green: 1, blue: 1, alpha: 1)
+        tabBar.barTintColor = #colorLiteral(red: 0.9496201873, green: 0.9496201873, blue: 0.9496201873, alpha: 1)
+        tabBar.tintColor = #colorLiteral(red: 0.2170326445, green: 0.505137953, blue: 0.1686274558, alpha: 1)
         
-        setViewControllers([createHomeVC(), createAnnouncementsVC(), createVideosVC(), createMerchVC()], animated: true)
+        setViewControllers([createHomeVC(), createVideosVC(), createNotiVC(), createMerchVC()], animated: true)
         
         
     }
