@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Lottie
 
 class MerchVC: UIViewController {
     
     let merchView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    var imageArr = [
+    let imageArr = [
         
         UIImage(named: "2"),
         UIImage(named: "11"),
@@ -25,6 +26,15 @@ class MerchVC: UIViewController {
         UIImage(named: "2"),
         UIImage(named: "11")
     
+    ]
+    
+    let nameArr = [
+        
+        "",
+        "",
+        "",
+        "",
+        
     ]
 
     override func viewDidLoad() {
@@ -76,6 +86,13 @@ class MerchVC: UIViewController {
             merchView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
             
         ])
+        
+    }
+    
+    func playAnimation(){
+        
+        
+        
         
     }
     

@@ -15,6 +15,41 @@ class CartVC: UIViewController {
     let clearCartButton = OPButton(Text: "Clear Cart")
     let checkoutButton = OPButton(Text: "Checkout")
     
+    let imageArr = [
+    
+        UIImage(named: "7"),
+        UIImage(named: "3")
+    
+    ]
+    
+    let priceArr = [
+        
+        "$65.00",
+        "$35.00"
+    
+    ]
+    
+    let nameArr = [
+        
+        "1% Sweatshirt (Cotton)",
+        "1% Black Tee (Polyester)"
+        
+    ]
+    
+    let sizeArr = [
+        
+        "Size: M",
+        "Size: XL"
+    
+    ]
+    
+    let countArr = [
+        
+        "Count: 2",
+        "Count: 2"
+    
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +60,7 @@ class CartVC: UIViewController {
         configureNavBar()
         configureTableView()
         configureRefreshController()
-        configureClearCartButton()
+        //configureClearCartButton()
         configureCheckoutButton()
         
     }
@@ -52,7 +87,7 @@ class CartVC: UIViewController {
         navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.2156862745, green: 0.5058823529, blue: 0.168627451, alpha: 1)
         
     }
-    
+
     private func configureTableView(){
         
         view.addSubview(tableView)
@@ -91,7 +126,14 @@ class CartVC: UIViewController {
         
         clearCartButton.addTarget(self, action: #selector(clearCart), for: .touchUpInside)
         
-        
+        NSLayoutConstraint.activate([
+            
+            clearCartButton.topAnchor.constraint(equalTo: view.topAnchor),
+            clearCartButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            clearCartButton.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            clearCartButton.heightAnchor.constraint(equalTo: view.heightAnchor)
+            
+        ])
         
     }
     
@@ -159,13 +201,21 @@ extension CartVC: UITableViewDelegate, UITableViewDataSource {
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 2
+        return imageArr.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: CartCell.reuseID, for: indexPath)
+        let image = imageArr[indexPath.row]
+        let name  = nameArr[indexPath.row]
+        let price = priceArr[indexPath.row]
+        let size  = sizeArr[indexPath.row]
+        let count = countArr[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: CartCell.reuseID, for: indexPath) as! CartCell
+        
+        cell.setup(Image: image!, ItemName: name, Price: price, Size: size, Quantity: count)
         
         return cell
         
@@ -180,7 +230,7 @@ extension CartVC: UITableViewDelegate, UITableViewDataSource {
             
         }
         
-        removeItem.image = UIImage(systemName: "")
+        removeItem.image = UIImage(systemName: "multiply")
         
         removeItem.backgroundColor = .red
         

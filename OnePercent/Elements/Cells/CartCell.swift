@@ -15,6 +15,8 @@ class CartCell: UITableViewCell {
     let itemImage = UIImageView()
     let itemLabel = UILabel()
     let itemPrice = UILabel()
+    let itemSize = UILabel()
+    let itemCount = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -22,6 +24,8 @@ class CartCell: UITableViewCell {
         configureItemImage()
         configureItemLabel()
         configureItemPrice()
+        configureItemSize()
+        configureItemCount()
         configureQuantityPicker()
         
     }
@@ -38,7 +42,6 @@ class CartCell: UITableViewCell {
         
         itemImage.layer.cornerRadius = 5
         itemImage.clipsToBounds = true
-        itemImage.image = UIImage(named: "3")
         
         itemImage.translatesAutoresizingMaskIntoConstraints = false
         
@@ -58,15 +61,13 @@ class CartCell: UITableViewCell {
         
         addSubview(itemLabel)
         
-        itemLabel.text = "One Percent 100% Cotton Black Tee"
-        
         itemLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             
             itemLabel.topAnchor.constraint(equalTo: itemImage.topAnchor, constant: 10),
             itemLabel.leadingAnchor.constraint(equalTo: itemImage.trailingAnchor, constant: 10),
-            itemLabel.trailingAnchor.constraint(equalTo: centerXAnchor)
+            itemLabel.trailingAnchor.constraint(equalTo: centerXAnchor, constant: 60)
             
         ])
    
@@ -77,8 +78,6 @@ class CartCell: UITableViewCell {
         
         addSubview(itemPrice)
         
-        itemPrice.text = "$60.00"
-        
         itemPrice.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -87,6 +86,46 @@ class CartCell: UITableViewCell {
             itemPrice.leadingAnchor.constraint(equalTo: itemImage.trailingAnchor, constant: 10),
             
         ])
+        
+    }
+    
+    private func configureItemSize(){
+        
+        addSubview(itemSize)
+        
+        itemSize.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            
+            itemSize.topAnchor.constraint(equalTo: itemLabel.topAnchor),
+            itemSize.leadingAnchor.constraint(equalTo: trailingAnchor, constant: -90),
+            
+        ])
+        
+    }
+    
+    private func configureItemCount(){
+        
+        addSubview(itemCount)
+        
+        itemCount.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            
+            itemCount.topAnchor.constraint(equalTo: itemPrice.topAnchor),
+            itemCount.leadingAnchor.constraint(equalTo: trailingAnchor, constant: -92),
+            
+        ])
+
+    }
+    
+    func setup(Image: UIImage, ItemName: String, Price: String, Size: String, Quantity: String){
+        
+        self.itemImage.image = Image
+        self.itemLabel.text = ItemName
+        self.itemPrice.text = Price
+        self.itemSize.text = Size
+        self.itemCount.text = Quantity
         
     }
     

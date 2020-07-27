@@ -12,6 +12,7 @@ class FullscreenItemVC: UIViewController {
     
     let itemView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     var itemImage = UIImage()
+    let itemTitle = UILabel()
     let priceLabel = UILabel()
     let itemDescription = UILabel()
     let ATCButton = OPButton(Text: "Add To Cart")
@@ -24,8 +25,9 @@ class FullscreenItemVC: UIViewController {
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         configureItemView()
-        configureDescription()
+        configureItemTitle()
         configurePriceLabel()
+        configureItemDescription()
         configureQuantityPicker()
         configureSizePicker()
         configureATCButton()
@@ -53,21 +55,69 @@ class FullscreenItemVC: UIViewController {
         
     }
     
+    private func configureItemTitle(){
+        
+        view.addSubview(itemTitle)
+        
+        itemTitle.text = "Classic Black"
+        
+        itemTitle.font = UIFont(name: "AvenirNext-Bold", size: 25)
+        
+        itemTitle.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            
+            itemTitle.topAnchor.constraint(equalTo: itemView.bottomAnchor, constant: 20),
+            itemTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            
+        ])
+        
+    }
+    
     private func configurePriceLabel(){
         
         view.addSubview(priceLabel)
         
-        priceLabel.text = "$60.00"
+        priceLabel.text = "$35.00"
         
         priceLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             
-            priceLabel.topAnchor.constraint(equalTo: itemDescription.bottomAnchor, constant: 10),
-            priceLabel.leadingAnchor.constraint(equalTo: itemView.leadingAnchor),
-            priceLabel.trailingAnchor.constraint(equalTo: itemView.trailingAnchor),
+            priceLabel.topAnchor.constraint(equalTo: itemTitle.bottomAnchor, constant: 5),
+            priceLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            priceLabel.heightAnchor.constraint(equalToConstant: 20)
             
         ])
+        
+        
+    }
+    
+    private func configureItemDescription(){
+        
+        view.addSubview(itemDescription)
+        
+        itemDescription.text =
+        "The Classic Black 1% Tee.\n\nMade in USA.\n\n100% Cotton."
+        
+        itemDescription.textAlignment = .center
+        
+        itemDescription.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        
+        itemDescription.numberOfLines = 5
+        
+        itemDescription.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            
+            itemDescription.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 25),
+            itemDescription.leadingAnchor.constraint(equalTo: itemView.leadingAnchor),
+            itemDescription.trailingAnchor.constraint(equalTo: itemView.trailingAnchor),
+            itemDescription.heightAnchor.constraint(equalToConstant: 120)
+            
+        ])
+
+        
         
         
     }
@@ -85,25 +135,6 @@ class FullscreenItemVC: UIViewController {
         
     }
     
-    private func configureDescription(){
-        
-        view.addSubview(itemDescription)
-        
-        itemDescription.text = "100% Cotton Black One Percent T-Shirt"
-        
-        itemDescription.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            
-            itemDescription.topAnchor.constraint(equalTo: itemView.bottomAnchor, constant: 10),
-            itemDescription.leadingAnchor.constraint(equalTo: itemView.leadingAnchor),
-            itemDescription.trailingAnchor.constraint(equalTo: itemView.trailingAnchor),
-            
-        ])
-        
-        
-    }
-    
     private func configureATCButton(){
         
         view.addSubview(ATCButton)
@@ -117,7 +148,7 @@ class FullscreenItemVC: UIViewController {
             ATCButton.heightAnchor.constraint(equalToConstant: 50),
             ATCButton.widthAnchor.constraint(equalToConstant: 230),
             ATCButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            ATCButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80)
+            ATCButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -65)
             
         ])
         

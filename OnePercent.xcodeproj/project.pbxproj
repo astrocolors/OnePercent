@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		726E8A819C9CF85EC0058CE8 /* Pods_OnePercent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D80F47C25509C305B0675E /* Pods_OnePercent.framework */; };
 		DD17A7FC24CCB276006F9D18 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17A7FB24CCB276006F9D18 /* HomeVC.swift */; };
 		DD1B7A8C24CE7BDF0023AC17 /* OPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1B7A8B24CE7BDF0023AC17 /* OPButton.swift */; };
 		DD1B7A8E24CE801B0023AC17 /* FullScreenItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1B7A8D24CE801B0023AC17 /* FullScreenItemCell.swift */; };
@@ -17,6 +18,7 @@
 		DD31D4F024CD76EF00974AFE /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31D4EF24CD76EF00974AFE /* CartCell.swift */; };
 		DD31D4F224CD776F00974AFE /* MerchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31D4F124CD776F00974AFE /* MerchCell.swift */; };
 		DD31D4F724CD78BE00974AFE /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31D4F624CD78BE00974AFE /* AboutVC.swift */; };
+		DD711CAA24CF7565006D8227 /* CustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD711CA924CF7565006D8227 /* CustomViewCell.swift */; };
 		DD9063F524CD623F00112F58 /* CustomViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9063F424CD623F00112F58 /* CustomViewVC.swift */; };
 		DD9063F724CD62FC00112F58 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9063F624CD62FC00112F58 /* SearchVC.swift */; };
 		DD9063F924CD673300112F58 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9063F824CD673300112F58 /* ProfileVC.swift */; };
@@ -33,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68CE0AB46792A7B6E4D99438 /* Pods-OnePercent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnePercent.debug.xcconfig"; path = "Target Support Files/Pods-OnePercent/Pods-OnePercent.debug.xcconfig"; sourceTree = "<group>"; };
+		80D80F47C25509C305B0675E /* Pods_OnePercent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnePercent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6B6EEFD2A058BF8F3070D88 /* Pods-OnePercent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnePercent.release.xcconfig"; path = "Target Support Files/Pods-OnePercent/Pods-OnePercent.release.xcconfig"; sourceTree = "<group>"; };
 		DD17A7FB24CCB276006F9D18 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		DD1B7A8B24CE7BDF0023AC17 /* OPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPButton.swift; sourceTree = "<group>"; };
 		DD1B7A8D24CE801B0023AC17 /* FullScreenItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenItemCell.swift; sourceTree = "<group>"; };
@@ -43,6 +48,7 @@
 		DD31D4EF24CD76EF00974AFE /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
 		DD31D4F124CD776F00974AFE /* MerchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchCell.swift; sourceTree = "<group>"; };
 		DD31D4F624CD78BE00974AFE /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Abou\U0010tVC.swift"; sourceTree = "<group>"; };
+		DD711CA924CF7565006D8227 /* CustomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewCell.swift; sourceTree = "<group>"; };
 		DD9063F424CD623F00112F58 /* CustomViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewVC.swift; sourceTree = "<group>"; };
 		DD9063F624CD62FC00112F58 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		DD9063F824CD673300112F58 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -65,12 +71,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				726E8A819C9CF85EC0058CE8 /* Pods_OnePercent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F0CB2E0A2D8416CC2954332 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80D80F47C25509C305B0675E /* Pods_OnePercent.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2CD1A2C7E6813244FACB832 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68CE0AB46792A7B6E4D99438 /* Pods-OnePercent.debug.xcconfig */,
+				A6B6EEFD2A058BF8F3070D88 /* Pods-OnePercent.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DD17A7F924CCB24C006F9D18 /* Apple */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,7 +148,6 @@
 		DD9063FB24CD6CF200112F58 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				DD913AB024CF5E0D00648FDA /* Fonts */,
 				DD9063FF24CD6E2800112F58 /* Views */,
 				DD31D4F424CD787800974AFE /* Layouts */,
 				DD9063FE24CD6E2100112F58 /* Cells */,
@@ -139,6 +163,7 @@
 				DD31D4EF24CD76EF00974AFE /* CartCell.swift */,
 				DD1B7A8D24CE801B0023AC17 /* FullScreenItemCell.swift */,
 				DD913AB124CF696700648FDA /* ProfileCell.swift */,
+				DD711CA924CF7565006D8227 /* CustomViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -149,13 +174,6 @@
 				DD1B7A8B24CE7BDF0023AC17 /* OPButton.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		DD913AB024CF5E0D00648FDA /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		DD93500A24CD458D008C306F /* Main */ = {
@@ -175,6 +193,8 @@
 			children = (
 				DDD270A324CCB10200F20F7F /* OnePercent */,
 				DDD270A224CCB10200F20F7F /* Products */,
+				C2CD1A2C7E6813244FACB832 /* Pods */,
+				6F0CB2E0A2D8416CC2954332 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,9 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDD270B524CCB10400F20F7F /* Build configuration list for PBXNativeTarget "OnePercent" */;
 			buildPhases = (
+				5B51F1C49AF589BAE3FEC481 /* [CP] Check Pods Manifest.lock */,
 				DDD2709D24CCB10200F20F7F /* Sources */,
 				DDD2709E24CCB10200F20F7F /* Frameworks */,
 				DDD2709F24CCB10200F20F7F /* Resources */,
+				BAFEB4486B60B7CCAB359A8D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -271,6 +293,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5B51F1C49AF589BAE3FEC481 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OnePercent-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAFEB4486B60B7CCAB359A8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnePercent/Pods-OnePercent-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnePercent/Pods-OnePercent-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OnePercent/Pods-OnePercent-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DDD2709D24CCB10200F20F7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -279,6 +343,7 @@
 				DD9063F724CD62FC00112F58 /* SearchVC.swift in Sources */,
 				DD31D4F024CD76EF00974AFE /* CartCell.swift in Sources */,
 				DD31D4EE24CD76BE00974AFE /* MerchFlowLayout.swift in Sources */,
+				DD711CAA24CF7565006D8227 /* CustomViewCell.swift in Sources */,
 				DD17A7FC24CCB276006F9D18 /* HomeVC.swift in Sources */,
 				DDD14BEC24CCB9DD00DA2825 /* MerchVC.swift in Sources */,
 				DD31D4EA24CD70A600974AFE /* HomeCell.swift in Sources */,
@@ -430,6 +495,7 @@
 		};
 		DDD270B624CCB10400F20F7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68CE0AB46792A7B6E4D99438 /* Pods-OnePercent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +514,7 @@
 		};
 		DDD270B724CCB10400F20F7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6B6EEFD2A058BF8F3070D88 /* Pods-OnePercent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

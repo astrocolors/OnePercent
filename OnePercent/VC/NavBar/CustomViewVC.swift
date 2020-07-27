@@ -10,6 +10,17 @@ import UIKit
 
 class CustomViewVC: UIViewController {
     
+    let choiceArr = [
+        
+        "Short Sleeves",
+        "Long Sleeves",
+        "Sweatshirts",
+        "Sweatpants",
+        "Jerseys",
+        "Accessories"
+    
+    ]
+    
     let customView = UITableView()
 
     override func viewDidLoad() {
@@ -29,6 +40,7 @@ class CustomViewVC: UIViewController {
         
         customView.separatorInset = .zero
         customView.rowHeight = 60
+        customView.register(CustomViewCell.self, forCellReuseIdentifier: CustomViewCell.reuseID)
         customView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -44,4 +56,27 @@ class CustomViewVC: UIViewController {
     }
     
 
+}
+
+extension CustomViewVC: UITableViewDelegate, UITableViewDataSource {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 5
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let label = choiceArr[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: CustomViewCell.reuseID, for: indexPath) as! CustomViewCell
+        
+        cell.setup(label: label)
+        
+        return cell
+        
+    }
+    
 }

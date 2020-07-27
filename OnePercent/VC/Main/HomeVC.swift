@@ -14,8 +14,8 @@ class HomeVC: UIViewController {
     
     var imageArr = [
         
-        UIImage(named: "11"),
-        UIImage(named: "2")
+        UIImage(named: "2"),
+        UIImage(named: "11")
     
     ]
 
