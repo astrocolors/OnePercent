@@ -14,8 +14,8 @@ class FullscreenItemVC: UIViewController {
     var itemImage = UIImage()
     let priceLabel = UILabel()
     let itemDescription = UILabel()
-    let ATCButton = UIButton()
-
+    let ATCButton = OPButton(Text: "Add To Cart")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,13 +50,6 @@ class FullscreenItemVC: UIViewController {
             itemView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             itemView.bottomAnchor.constraint(equalTo: view.centerYAnchor, constant: 40)
         ])
-        
-    }
-    
-    func setItemImage(image: UIImage){
-        
-        
-        
         
     }
     
@@ -115,16 +108,28 @@ class FullscreenItemVC: UIViewController {
         
         view.addSubview(ATCButton)
         
+        ATCButton.addTarget(self, action: #selector(addToCart), for: .touchUpInside)
+        
         ATCButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             
-            ATCButton.topAnchor.constraint(equalTo: view.topAnchor),
-            ATCButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            ATCButton.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            ATCButton.heightAnchor.constraint(equalTo: view.heightAnchor)
+            ATCButton.heightAnchor.constraint(equalToConstant: 50),
+            ATCButton.widthAnchor.constraint(equalToConstant: 230),
+            ATCButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            ATCButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80)
             
         ])
+        
+    }
+    
+    @objc func addToCart(){
+        
+        dismiss(animated: true) {
+            
+            print("Add to cart + Added to cart animation")
+            
+        }
         
     }
 

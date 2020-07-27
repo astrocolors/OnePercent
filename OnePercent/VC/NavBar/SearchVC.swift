@@ -45,6 +45,7 @@ class SearchVC: UIViewController {
         
         tableView.separatorInset = .zero
         tableView.rowHeight = 60
+        tableView.separatorColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -64,3 +65,5 @@ class SearchVC: UIViewController {
         
     }
 }
+
+

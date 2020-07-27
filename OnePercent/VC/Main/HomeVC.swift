@@ -11,7 +11,6 @@ import UIKit
 class HomeVC: UIViewController {
     
     let tableView = UITableView()
-    let refreshController = UIRefreshControl()
     
     var imageArr = [
         
@@ -29,7 +28,6 @@ class HomeVC: UIViewController {
 
         configureNavBar()
         configureTableView()
-        configureRefreshController()
         
     }
     
@@ -68,25 +66,6 @@ class HomeVC: UIViewController {
         ])
         
     }
-    
-    private func configureRefreshController(){
-        
-        tableView.addSubview(refreshController)
-        
-        refreshController.addTarget(self, action: #selector(refreshView), for: .valueChanged)
-        
-        refreshController.tintColor = #colorLiteral(red: 0.2156862745, green: 0.5058823529, blue: 0.168627451, alpha: 1)
-        
-    }
-    
-    @objc func refreshView(){
-        
-        print("View Refreshed!")
-        
-        refreshController.endRefreshing()
-        
-    }
-
 
 }
 

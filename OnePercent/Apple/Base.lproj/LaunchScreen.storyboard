@@ -15,12 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="One Percent (transparent)" translatesAutoresizingMaskIntoConstraints="NO" id="dAh-WU-v5E">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="One Percent (transparent)" translatesAutoresizingMaskIntoConstraints="NO" id="dAh-WU-v5E">
                                 <rect key="frame" x="87" y="328" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dAh-WU-v5E" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Bnk-5H-03s"/>
+                            <constraint firstItem="dAh-WU-v5E" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KMm-9A-GKN"/>
+                            <constraint firstItem="dAh-WU-v5E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="284" id="e7g-MH-saE"/>
+                            <constraint firstItem="dAh-WU-v5E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="oAu-1q-N9M"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

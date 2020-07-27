@@ -9,6 +9,10 @@
 import UIKit
 
 class ProfileVC: UIViewController {
+    
+    let userAvatar = UIImageView()
+    let userLabel  = UILabel()
+    let optionsView = UITableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +22,9 @@ class ProfileVC: UIViewController {
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         configureNavBar()
+        configureUserAvatar()
+        configureUserLabel()
+        configureUserOptions()
         
     }
     
@@ -30,6 +37,66 @@ class ProfileVC: UIViewController {
         
     }
     
+    private func configureUserAvatar(){
+        
+        view.addSubview(userAvatar)
+        
+        userAvatar.image = UIImage(named: "ElonMusk")
+        userAvatar.clipsToBounds = true
+        userAvatar.contentMode = .scaleAspectFill
+        userAvatar.layer.cornerRadius = 100
+        userAvatar.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            
+            userAvatar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
+            userAvatar.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            userAvatar.heightAnchor.constraint(equalToConstant: 200),
+            userAvatar.widthAnchor.constraint(equalToConstant: 200)
+            
+        ])
+
+    }
+    
+    private func configureUserLabel(){
+        
+        view.addSubview(userLabel)
+        
+        userLabel.text = "@Astronomical"
+        
+        userLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            
+            userLabel.topAnchor.constraint(equalTo: userAvatar.bottomAnchor, constant: 15),
+            userLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            
+        ])
+        
+    }
+    
+    private func configureUserOptions(){
+        
+        view.addSubview(optionsView)
+        
+        optionsView.separatorInset = .zero
+        optionsView.rowHeight = 50
+        optionsView.isScrollEnabled = false
+        optionsView.register(ProfileCell.self, forCellReuseIdentifier: ProfileCell.reuseID)
+        
+        optionsView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            
+            optionsView.topAnchor.constraint(equalTo: userLabel.bottomAnchor),
+            optionsView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            optionsView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            optionsView.heightAnchor.constraint(equalTo: view.heightAnchor)
+            
+        ])
+
+    }
+    
     @objc func pushSettingsVC(){
         
         let settingsVC = SettingsVC()
@@ -39,4 +106,23 @@ class ProfileVC: UIViewController {
     }
 
 
+}
+
+extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 2
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCell.reuseID, for: indexPath)
+        
+        return cell
+        
+    }
+    
 }

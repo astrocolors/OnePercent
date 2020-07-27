@@ -14,17 +14,15 @@ class MerchVC: UIViewController {
     
     var imageArr = [
         
-        UIImage(named: "3"),
-        UIImage(named: "4"),
-        UIImage(named: "7"),
-        UIImage(named: "10"),
-        UIImage(named: "12"),
-        UIImage(named: "13"),
         UIImage(named: "2"),
+        UIImage(named: "11"),
         UIImage(named: "5"),
-        UIImage(named: "6"),
-        UIImage(named: "8"),
         UIImage(named: "9"),
+        UIImage(named: "11"),
+        UIImage(named: "6"),
+        UIImage(named: "9"),
+        UIImage(named: "5"),
+        UIImage(named: "2"),
         UIImage(named: "11")
     
     ]
@@ -66,6 +64,7 @@ class MerchVC: UIViewController {
         merchView.backgroundColor = .white
         merchView.delegate = self
         merchView.dataSource = self
+        merchView.showsVerticalScrollIndicator = false
         merchView.translatesAutoresizingMaskIntoConstraints = false
         merchView.register(MerchCell.self, forCellWithReuseIdentifier: MerchCell.reuseID)
         

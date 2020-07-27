@@ -12,6 +12,8 @@ class CartVC: UIViewController {
     
     let tableView = UITableView()
     let refreshController = UIRefreshControl()
+    let clearCartButton = OPButton(Text: "Clear Cart")
+    let checkoutButton = OPButton(Text: "Checkout")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,8 @@ class CartVC: UIViewController {
         configureNavBar()
         configureTableView()
         configureRefreshController()
+        configureClearCartButton()
+        configureCheckoutButton()
         
     }
     
@@ -62,10 +66,10 @@ class CartVC: UIViewController {
         
         NSLayoutConstraint.activate([
             
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -120)
             
         ])
 
@@ -81,9 +85,39 @@ class CartVC: UIViewController {
         
     }
     
+    private func configureClearCartButton(){
+        
+        view.addSubview(clearCartButton)
+        
+        clearCartButton.addTarget(self, action: #selector(clearCart), for: .touchUpInside)
+        
+        
+        
+    }
+    
+    private func configureCheckoutButton(){
+        
+        view.addSubview(checkoutButton)
+        
+        checkoutButton.addTarget(self, action: #selector(pushCheckoutVC), for: .touchUpInside)
+        
+        NSLayoutConstraint.activate([
+            
+            checkoutButton.heightAnchor.constraint(equalToConstant: 50),
+            checkoutButton.widthAnchor.constraint(equalToConstant: 200),
+            checkoutButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            checkoutButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30)
+            
+        ])
+    }
+    
     @objc func refreshView(){
         
-        print("View Refreshed")
+        self.perform(#selector(endRefreshing), with: nil, afterDelay: 1.0)
+        
+    }
+    
+    @objc func endRefreshing(){
         
         refreshController.endRefreshing()
         
@@ -105,6 +139,20 @@ class CartVC: UIViewController {
         
     }
     
+    @objc func clearCart(){
+        
+        print("Cart Cleared")
+        
+    }
+    
+    @objc func pushCheckoutVC(){
+        
+        let checkoutVC = CheckoutVC()
+        
+        navigationController?.pushViewController(checkoutVC, animated: true)
+        
+    }
+    
 }
 
 extension CartVC: UITableViewDelegate, UITableViewDataSource {
@@ -120,6 +168,25 @@ extension CartVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: CartCell.reuseID, for: indexPath)
         
         return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        
+        let removeItem = UIContextualAction(style: .destructive, title: "") { (action, view, handler) in
+            
+            handler(true)
+            
+        }
+        
+        removeItem.image = UIImage(systemName: "")
+        
+        removeItem.backgroundColor = .red
+        
+        let swipeActions = UISwipeActionsConfiguration(actions: [removeItem])
+        
+        return swipeActions
         
     }
       

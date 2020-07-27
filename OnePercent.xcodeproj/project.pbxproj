@@ -21,6 +21,8 @@
 		DD9063F724CD62FC00112F58 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9063F624CD62FC00112F58 /* SearchVC.swift */; };
 		DD9063F924CD673300112F58 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9063F824CD673300112F58 /* ProfileVC.swift */; };
 		DD9063FD24CD6DBF00112F58 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9063FC24CD6DBF00112F58 /* SettingsVC.swift */; };
+		DD913AAF24CF516800648FDA /* CheckoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD913AAE24CF516800648FDA /* CheckoutVC.swift */; };
+		DD913AB224CF696700648FDA /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD913AB124CF696700648FDA /* ProfileCell.swift */; };
 		DDD14BE824CCB7CB00DA2825 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD14BE724CCB7CB00DA2825 /* TabBarVC.swift */; };
 		DDD14BEC24CCB9DD00DA2825 /* MerchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD14BEB24CCB9DD00DA2825 /* MerchVC.swift */; };
 		DDD270A524CCB10200F20F7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD270A424CCB10200F20F7F /* AppDelegate.swift */; };
@@ -45,6 +47,8 @@
 		DD9063F624CD62FC00112F58 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		DD9063F824CD673300112F58 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		DD9063FC24CD6DBF00112F58 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		DD913AAE24CF516800648FDA /* CheckoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutVC.swift; sourceTree = "<group>"; };
+		DD913AB124CF696700648FDA /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		DDD14BE724CCB7CB00DA2825 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		DDD14BEB24CCB9DD00DA2825 /* MerchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchVC.swift; sourceTree = "<group>"; };
 		DDD270A124CCB10200F20F7F /* OnePercent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnePercent.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +123,7 @@
 		DD9063FB24CD6CF200112F58 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				DD913AB024CF5E0D00648FDA /* Fonts */,
 				DD9063FF24CD6E2800112F58 /* Views */,
 				DD31D4F424CD787800974AFE /* Layouts */,
 				DD9063FE24CD6E2100112F58 /* Cells */,
@@ -133,6 +138,7 @@
 				DD31D4F124CD776F00974AFE /* MerchCell.swift */,
 				DD31D4EF24CD76EF00974AFE /* CartCell.swift */,
 				DD1B7A8D24CE801B0023AC17 /* FullScreenItemCell.swift */,
+				DD913AB124CF696700648FDA /* ProfileCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -143,6 +149,13 @@
 				DD1B7A8B24CE7BDF0023AC17 /* OPButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DD913AB024CF5E0D00648FDA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		DD93500A24CD458D008C306F /* Main */ = {
@@ -188,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				DDE9903524CD7F8B00DC5EF1 /* FullscreenItemVC.swift */,
+				DD913AAE24CF516800648FDA /* CheckoutVC.swift */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -268,6 +282,8 @@
 				DD17A7FC24CCB276006F9D18 /* HomeVC.swift in Sources */,
 				DDD14BEC24CCB9DD00DA2825 /* MerchVC.swift in Sources */,
 				DD31D4EA24CD70A600974AFE /* HomeCell.swift in Sources */,
+				DD913AB224CF696700648FDA /* ProfileCell.swift in Sources */,
+				DD913AAF24CF516800648FDA /* CheckoutVC.swift in Sources */,
 				DD9063F924CD673300112F58 /* ProfileVC.swift in Sources */,
 				DD31D4F224CD776F00974AFE /* MerchCell.swift in Sources */,
 				DD9063F524CD623F00112F58 /* CustomViewVC.swift in Sources */,
