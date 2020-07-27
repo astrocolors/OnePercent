@@ -11,16 +11,18 @@ import UIKit
 class CartVC: UIViewController {
     
     let tableView = UITableView()
-    let checkoutButton = UIButton(frame: CGRect(x: 0, y: 0, width: 400, height: 50))
-
+    let refreshController = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        overrideUserInterfaceStyle = .light 
 
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         configureNavBar()
-        //configureCheckoutButton()
-        //configureTableView()
+        configureTableView()
+        configureRefreshController()
         
     }
     
@@ -51,8 +53,11 @@ class CartVC: UIViewController {
         
         view.addSubview(tableView)
         
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.separatorInset = .zero
         tableView.rowHeight = 100
+        tableView.register(CartCell.self, forCellReuseIdentifier: CartCell.reuseID)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -60,27 +65,27 @@ class CartVC: UIViewController {
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: checkoutButton.topAnchor, constant: 40)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             
         ])
 
     }
     
-    private func configureCheckoutButton(){
+    private func configureRefreshController(){
         
-        view.addSubview(checkoutButton)
+        tableView.addSubview(refreshController)
         
-        checkoutButton.backgroundColor = #colorLiteral(red: 0.2156862745, green: 0.5058823529, blue: 0.168627451, alpha: 1)
-        checkoutButton.setTitle("Checkout", for: .normal)
-        checkoutButton.layer.cornerRadius = 10
-        checkoutButton.translatesAutoresizingMaskIntoConstraints = false
+        refreshController.tintColor = #colorLiteral(red: 0.2156862745, green: 0.5058823529, blue: 0.168627451, alpha: 1)
         
-        NSLayoutConstraint.activate([
-            
-            checkoutButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            checkoutButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-            
-        ])
+        refreshController.addTarget(self, action: #selector(refreshView), for: .valueChanged)
+        
+    }
+    
+    @objc func refreshView(){
+        
+        print("View Refreshed")
+        
+        refreshController.endRefreshing()
         
     }
     
@@ -100,4 +105,22 @@ class CartVC: UIViewController {
         
     }
     
+}
+
+extension CartVC: UITableViewDelegate, UITableViewDataSource {
+   
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 2
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: CartCell.reuseID, for: indexPath)
+        
+        return cell
+        
+    }
+      
 }

@@ -2,7 +2,7 @@
 //  AboutVC.swift
 //  OnePercent
 //
-//  Created by Shamik Patro on 7/26/20.
+//  Created by Astro on 7/26/20.
 //  Copyright © 2020 Astronomical. All rights reserved.
 //
 
@@ -12,6 +12,8 @@ class Abou_tVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        overrideUserInterfaceStyle = .light 
 
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }

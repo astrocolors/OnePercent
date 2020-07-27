@@ -11,9 +11,28 @@ import UIKit
 class MerchVC: UIViewController {
     
     let merchView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    
+    var imageArr = [
+        
+        UIImage(named: "3"),
+        UIImage(named: "4"),
+        UIImage(named: "7"),
+        UIImage(named: "10"),
+        UIImage(named: "12"),
+        UIImage(named: "13"),
+        UIImage(named: "2"),
+        UIImage(named: "5"),
+        UIImage(named: "6"),
+        UIImage(named: "8"),
+        UIImage(named: "9"),
+        UIImage(named: "11")
+    
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        overrideUserInterfaceStyle = .light 
         
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 
@@ -52,10 +71,10 @@ class MerchVC: UIViewController {
         
         NSLayoutConstraint.activate([
             
-            merchView.topAnchor.constraint(equalTo: view.topAnchor),
-            merchView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            merchView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            merchView.heightAnchor.constraint(equalTo: view.heightAnchor)
+            merchView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            merchView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            merchView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            merchView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
             
         ])
         
@@ -81,7 +100,7 @@ class MerchVC: UIViewController {
     
 }
 
-extension MerchVC: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MerchVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
@@ -91,21 +110,35 @@ extension MerchVC: UICollectionViewDelegate, UICollectionViewDataSource {
    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 2
+        return imageArr.count
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        let image = imageArr[indexPath.row]!
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MerchCell.reuseID, for: indexPath) as! MerchCell
+        
+        cell.setImage(image: image)
         
         return cell
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: collectionView.frame.width / 2.08, height: collectionView.frame.width / 1.5)
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let image = imageArr[indexPath.row]
+        
         let fullScreenItemVC = FullscreenItemVC()
+        
+        fullScreenItemVC.itemImage = image!
         
         present(fullScreenItemVC, animated: true)
         

@@ -15,6 +15,8 @@ class SearchVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        overrideUserInterfaceStyle = .light 
 
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
@@ -34,7 +36,6 @@ class SearchVC: UIViewController {
         navigationItem.setRightBarButton(dismissItem, animated: true)
         
         navigationItem.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.2156862745, green: 0.5058823529, blue: 0.168627451, alpha: 1)
-        
         
     }
     

@@ -18,6 +18,8 @@ class TabBarVC: UITabBarController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        overrideUserInterfaceStyle = .light 
+        
         configure()
         
     }

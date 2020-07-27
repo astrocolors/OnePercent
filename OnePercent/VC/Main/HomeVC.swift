@@ -12,9 +12,18 @@ class HomeVC: UIViewController {
     
     let tableView = UITableView()
     let refreshController = UIRefreshControl()
+    
+    var imageArr = [
+        
+        UIImage(named: "11"),
+        UIImage(named: "2")
+    
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        overrideUserInterfaceStyle = .light 
         
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 
@@ -23,7 +32,6 @@ class HomeVC: UIViewController {
         configureRefreshController()
         
     }
-    
     
     private func configureNavBar(){
         
@@ -46,15 +54,16 @@ class HomeVC: UIViewController {
         tableView.contentInsetAdjustmentBehavior = .never
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.layer.cornerRadius = 10
         tableView.register(HomeCell.self, forCellReuseIdentifier: HomeCell.reuseID)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
             
         ])
         
@@ -85,14 +94,17 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10
-        
+        return imageArr.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let image = imageArr[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeCell.reuseID, for: indexPath) as! HomeCell
+        
+        cell.iv.image = image
         
         return cell
         

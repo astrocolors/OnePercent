@@ -12,6 +12,8 @@ class HomeCell: UITableViewCell {
 
     static let reuseID = "HomeCell"
     
+    let iv = UIImageView()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -26,20 +28,20 @@ class HomeCell: UITableViewCell {
     
     func configureTemp(){
         
-        let iv = UIImageView(image: UIImage(named: "One Percent"))
-        
         addSubview(iv)
-        
+        iv.contentMode = .scaleAspectFill
+        iv.clipsToBounds = true
+        iv.layer.cornerRadius = 10
         iv.translatesAutoresizingMaskIntoConstraints = false
-        
         
         NSLayoutConstraint.activate([
 
-            iv.centerXAnchor.constraint(equalTo: centerXAnchor),
-            iv.centerYAnchor.constraint(equalTo: centerYAnchor)
+            iv.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
+            iv.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            iv.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            iv.bottomAnchor.constraint(equalTo: centerYAnchor)
             
         ])
-
         
     }
     
