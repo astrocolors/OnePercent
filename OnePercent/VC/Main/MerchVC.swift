@@ -13,6 +13,8 @@ class MerchVC: UIViewController {
     
     let merchView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
+    let animationView = AnimationView()
+    
     let imageArr = [
         
         UIImage(named: "2"),
@@ -46,6 +48,8 @@ class MerchVC: UIViewController {
 
         configureNavBar()
         configureMerchView()
+        configureAnimation()
+        
     }
     
     private func configureNavBar(){
@@ -89,10 +93,13 @@ class MerchVC: UIViewController {
         
     }
     
-    func playAnimation(){
+    func configureAnimation(){
         
-        
-        
+        view.addSubview(animationView)
+        animationView.alpha = 0
+        animationView.animation = Animation.named("CheckMark")
+        animationView.frame = view.bounds
+        animationView.contentMode = .scaleAspectFit
         
     }
     
@@ -154,9 +161,43 @@ extension MerchVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         
         let fullScreenItemVC = FullscreenItemVC()
         
+        fullScreenItemVC.delegate = self
+        
         fullScreenItemVC.itemImage = image!
         
         present(fullScreenItemVC, animated: true)
+        
+    }
+    
+}
+
+extension MerchVC: FullScreenDelegate {
+    
+    func startAnimation(){
+        
+        UIView.animate(withDuration: 0.2) {
+            
+            UIView.animate(withDuration: 0.2) {
+                
+                self.animationView.alpha = 1
+                
+            }
+            
+            self.animationView.play { (finished) in
+                
+                UIView.animate(withDuration: 0.2) {
+                    
+                    
+                    self.animationView.alpha = 0
+                    
+                    
+                }
+                
+                
+            }
+            
+        }
+        
         
     }
     

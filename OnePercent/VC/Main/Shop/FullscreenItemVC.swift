@@ -7,6 +7,13 @@
 //
 
 import UIKit
+import Lottie
+
+protocol FullScreenDelegate {
+    
+    func startAnimation()
+    
+}
 
 class FullscreenItemVC: UIViewController {
     
@@ -16,6 +23,8 @@ class FullscreenItemVC: UIViewController {
     let priceLabel = UILabel()
     let itemDescription = UILabel()
     let ATCButton = OPButton(Text: "Add To Cart")
+    
+    var delegate: FullScreenDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -158,7 +167,7 @@ class FullscreenItemVC: UIViewController {
         
         dismiss(animated: true) {
             
-            print("Add to cart + Added to cart animation")
+            self.delegate?.startAnimation()
             
         }
         
